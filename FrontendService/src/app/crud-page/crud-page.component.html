@@ -1,0 +1,51 @@
+<div class="crud-container">
+    <div class="crud-column">
+        <h2>Create</h2>
+        <div class="crud-column">
+            <h2>Create</h2>
+            <form (submit)="createEntry()">
+                <input type="text" placeholder="Name" [(ngModel)]="createName" name="createName">
+                <input type="text" placeholder="City" [(ngModel)]="createCity" name="createCity">
+                <input type="date" placeholder="DOB" [(ngModel)]="createDob" name="createDob">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+    <div class="crud-column">
+        <h2>Read</h2>
+        <div class="crud-column">
+            <h2>Read by ID</h2>
+            <input type="text" placeholder="Enter ID" [(ngModel)]="fetchId" name="fetchId">
+            <button (click)="fetchEntryById()">Fetch Entry</button>
+        </div>
+    </div>
+    <div class="crud-column">
+        <h2>Update</h2>
+        <div class="crud-column">
+            <h2>Update</h2>
+            <form (submit)="updateEntry()">
+                <input type="text" placeholder="ID" [(ngModel)]="updateId" name="updateId">
+                <input type="text" placeholder="Name" [(ngModel)]="updateName" name="updateName">
+                <input type="text" placeholder="City" [(ngModel)]="updateCity" name="updateCity">
+                <input type="date" placeholder="DOB" [(ngModel)]="updateDob" name="updateDob">
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+    <div class="crud-column">
+        <h2>Delete</h2>
+        <div class="crud-column">
+            <h2>Delete</h2>
+            <form (submit)="deleteEntry()">
+                <input type="text" placeholder="ID" [(ngModel)]="deleteId" name="deleteId">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Output Section -->
+<div class="output-container">
+    <h2>Output:</h2>
+    <pre>{{ output | json }}</pre> <!-- Using 'json' pipe for beautiful format -->
+</div>

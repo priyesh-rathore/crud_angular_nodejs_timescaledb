@@ -1,0 +1,27 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0f0f23; /* Dark background */
+    color: #39ff14; /* Neon green text */
+    font-family: 'Courier New', monospace;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  button {
+    background-color: #ff20c5; /* Neon pink */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #ff40d5;
+  }
+  
